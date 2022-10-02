@@ -1,3 +1,5 @@
+!(https://raw.githubusercontent.com/ShaolinAssassin/xfce-kbdleds-genmon-scripts/main/preview.png)
+
 # Installation
 
 Download the lastest [release](https://github.com/ShaolinAssassin/xfce-kbdleds-genmon-scripts/releases) archive and extract it to your home user folder.
