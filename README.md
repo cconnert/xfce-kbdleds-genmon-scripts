@@ -1,4 +1,4 @@
-!(https://raw.githubusercontent.com/ShaolinAssassin/xfce-kbdleds-genmon-scripts/main/preview.png)
+!(https://github.com/ShaolinAssassin/xfce-kbdleds-genmon-scripts/blob/main/preview.png)
 
 # Installation
 
