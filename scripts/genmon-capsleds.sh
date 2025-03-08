@@ -2,12 +2,15 @@
 
 ## genmon script to display status of keyboard CAPS LEDS
 # modified version of kbdleds.sh script from https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin/start page
-
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+readonly DIR_ICONS="$SCRIPT_DIR/../icons/hicolor/scalable/status"
 # icons (ON/OFF)
-CAPSON="<icon>capslock-enabled-symbolic</icon>"
-CAPSON+="<iconclick>xdotool key Caps_Lock</iconclick>"
-CAPSOFF="<icon>capslock-disabled-symbolic</icon>"
-CAPSOFF+="<iconclick>xdotool key Caps_Lock</iconclick>"
+CAPSON="<img>${DIR_ICONS}/capslock-enabled-symbolic.svg</img>"
+CAPSON+="<click>xdotool key Caps_Lock</click>"
+CAPSON+="<tool>Caps-Lock indicator</tool>"
+CAPSOFF="<img>${DIR_ICONS}/capslock-disabled-symbolic.svg</img>"
+CAPSOFF+="<click>xdotool key Caps_Lock</click>"
+CAPSOFF+="<tool>Caps-Lock indicator</tool>"
 
 # icons (ON only)
 #CAPSON="<icon>capslock-enabled-symbolic</icon>"
