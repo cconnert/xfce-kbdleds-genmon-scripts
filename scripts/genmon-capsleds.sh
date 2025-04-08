@@ -5,20 +5,16 @@
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 readonly DIR_ICONS="$SCRIPT_DIR/../icons/hicolor/scalable/status"
 # icons (ON/OFF)
-CAPSON="<img>${DIR_ICONS}/capslock-enabled-symbolic.svg</img>"
-CAPSON+="<click>xdotool key Caps_Lock</click>"
-CAPSON+="<tool>Caps-Lock indicator</tool>"
-CAPSOFF="<img>${DIR_ICONS}/capslock-disabled-symbolic.svg</img>"
-CAPSOFF+="<click>xdotool key Caps_Lock</click>"
-CAPSOFF+="<tool>Caps-Lock indicator</tool>"
-
-# icons (ON only)
-#CAPSON="<icon>capslock-enabled-symbolic</icon>"
-#CAPSOFF=""
+ON="<img>${DIR_ICONS}/capslock-enabled-symbolic.svg</img>"
+ON+="<click>xdotool key Caps_Lock</click>"
+ON+="<tool>Caps-Lock indicator</tool>"
+OFF="<img>${DIR_ICONS}/capslock-disabled-symbolic.svg</img>"
+OFF+="<click>xdotool key Caps_Lock</click>"
+OFF+="<tool>Caps-Lock indicator</tool>"
 
 # code
 STATE=($(xset q | grep Caps\ Lock | awk '{print $4" "$8" "$12}'))
-CAPS=$([[ ${STATE[0]} == "on" ]] && echo "${CAPSON}" || echo "${CAPSOFF}")
+CAPS=$([[ ${STATE[0]} == "on" ]] && echo "${ON}" || echo "${OFF}")
 
 # genmon output
 echo "$CAPS"
